@@ -11,8 +11,10 @@
 
 <body>
     <main class="wrapper">
+
+        <section id="login" class="login"></section>
         
-        <article class="calaverita">
+        <article id="calaverita" class="calaverita">
             <section class="craneos">
                 <div class="craneo craneo"></div>
                 <div class="craneo craneo1"></div>
@@ -53,5 +55,28 @@ llevarse a todos al panteón sería lo mejor. 😈
         </article>
     </main>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const login = document.getElementById('login');
+        const calaverita = document.getElementById('calaverita');
+
+        setTimeout(()=>{
+            login.classList.add('login-open');
+
+            setTimeout(()=>{
+                login.classList.remove('login-open');
+
+                setTimeout(()=>{
+                    calaverita.classList.add('calaverita-open');
+                }, 1000);
+
+            }, 1000);
+
+        }, 1000);
+
+        
+    });
+
+</script>
 
 </html>
